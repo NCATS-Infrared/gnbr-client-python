@@ -20,7 +20,13 @@ If the python package is hosted on Github, you can install directly from Github
 ```sh
 pip install git+https://github.com/NCATS-Infrared/gnbr-client-python.git
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com//.git`). Another option is to install using a virtual environment (conda or virtualenv). To do so, set up and/or activate your environment and use pip as per usual.
+
+Then import the package:
+```python
+import swagger_client 
+```
+
+(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/NCATS-Infrared/gnbr-client-python.git`). Another option is to install using a virtual environment (conda or virtualenv). To do so, set up and/or activate your environment and use pip as per usual.
 
 virtualenv
 ```
@@ -30,12 +36,9 @@ source env/bin/activate
 conda
 ```
 conda create --name env
+source activate env
 ```
 
-Then import the package:
-```python
-import swagger_client 
-```
 
 ### Setuptools
 
