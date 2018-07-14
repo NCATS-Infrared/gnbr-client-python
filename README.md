@@ -13,14 +13,24 @@ For more information, please visit [http://starinformatics.com](http://starinfor
 Python 2.7 and 3.4+
 
 ## Installation & Usage
-### pip install
+### pip install (Recommended)
 
 If the python package is hosted on Github, you can install directly from Github
 
 ```sh
-pip install git+https://github.com//.git
+pip install git+https://github.com/NCATS-Infrared/gnbr-client-python.git
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com//.git`)
+(you may need to run `pip` with root permission: `sudo pip install git+https://github.com//.git`). Another option is to install using a virtual environment (conda or virtualenv). To do so, set up and/or activate your environment and use pip as per usual.
+
+virtualenv
+```
+virtualenv env
+source env/bin/activate
+```
+conda
+```
+conda create --name env
+```
 
 Then import the package:
 ```python
@@ -100,5 +110,5 @@ Class | Method | HTTP request | Description
 
 ## Author
 
-richard@starinformatics.com
+srensi@stanford.edu
 
