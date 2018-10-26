@@ -1,19 +1,20 @@
 # swagger_client.MetadataApi
 
-All URIs are relative to *https://reference-beacon.ncats.io*
+All URIs are relative to *https://gnbr.ncats.io:8080*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_concept_types**](MetadataApi.md#get_concept_types) | **GET** /types | 
+[**get_concept_categories**](MetadataApi.md#get_concept_categories) | **GET** /categories | 
+[**get_knowledge_map**](MetadataApi.md#get_knowledge_map) | **GET** /kmap | 
 [**get_predicates**](MetadataApi.md#get_predicates) | **GET** /predicates | 
 
 
-# **get_concept_types**
-> list[BeaconConceptType] get_concept_types()
+# **get_concept_categories**
+> list[BeaconConceptCategory] get_concept_categories()
 
 
 
-Get a list of types and # of instances in the knowledge source, and a link to the API call for the list of equivalent terminology 
+Get a list of concept categories and number of their concept instances documented by the knowledge source. These types should be mapped onto the Translator-endorsed Biolink Model concept type classes with local types, explicitly added as mappings to the Biolink Model YAML file. A  frequency of -1 indicates the category can exist, but the count is unknown.  
 
 ### Example
 ```python
@@ -27,10 +28,10 @@ from pprint import pprint
 api_instance = swagger_client.MetadataApi()
 
 try:
-    api_response = api_instance.get_concept_types()
+    api_response = api_instance.get_concept_categories()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling MetadataApi->get_concept_types: %s\n" % e)
+    print("Exception when calling MetadataApi->get_concept_categories: %s\n" % e)
 ```
 
 ### Parameters
@@ -38,7 +39,50 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**list[BeaconConceptType]**](BeaconConceptType.md)
+[**list[BeaconConceptCategory]**](BeaconConceptCategory.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_knowledge_map**
+> list[BeaconKnowledgeMapStatement] get_knowledge_map()
+
+
+
+Get a high level knowledge map of the all the beacons by subject semantic type, predicate and semantic object type 
+
+### Example
+```python
+from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.MetadataApi()
+
+try:
+    api_response = api_instance.get_knowledge_map()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling MetadataApi->get_knowledge_map: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**list[BeaconKnowledgeMapStatement]**](BeaconKnowledgeMapStatement.md)
 
 ### Authorization
 

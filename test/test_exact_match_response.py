@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import swagger_client
-from swagger_client.models.beacon_predicate import BeaconPredicate  # noqa: E501
+from swagger_client.models.exact_match_response import ExactMatchResponse  # noqa: E501
 from swagger_client.rest import ApiException
 
 
-class TestBeaconPredicate(unittest.TestCase):
-    """BeaconPredicate unit test stubs"""
+class TestExactMatchResponse(unittest.TestCase):
+    """ExactMatchResponse unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +29,10 @@ class TestBeaconPredicate(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testBeaconPredicate(self):
-        """Test BeaconPredicate"""
+    def testExactMatchResponse(self):
+        """Test ExactMatchResponse"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.beacon_predicate.BeaconPredicate()  # noqa: E501
+        # model = swagger_client.models.exact_match_response.ExactMatchResponse()  # noqa: E501
         pass
 
 
