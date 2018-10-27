@@ -65,7 +65,7 @@ except ApiException as e:
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://gnbr.ncats.io:8080*
+All URIs are relative to *http://gnbr.ncats.io:8080*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
