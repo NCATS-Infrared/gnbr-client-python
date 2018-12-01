@@ -1,6 +1,6 @@
-# swagger_client.MetadataApi
+# gnbr_beacon.MetadataApi
 
-All URIs are relative to *http://gnbr.ncats.io:8080*
+All URIs are relative to *https://gnbr.ncats.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -20,12 +20,12 @@ Get a list of concept categories and number of their concept instances documente
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import gnbr_beacon
+from gnbr_beacon.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.MetadataApi()
+api_instance = gnbr_beacon.MetadataApi()
 
 try:
     api_response = api_instance.get_concept_categories()
@@ -63,12 +63,12 @@ Get a high level knowledge map of the all the beacons by subject semantic type, 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import gnbr_beacon
+from gnbr_beacon.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.MetadataApi()
+api_instance = gnbr_beacon.MetadataApi()
 
 try:
     api_response = api_instance.get_knowledge_map()
@@ -106,12 +106,12 @@ Get a list of predicates used in statements issued by the knowledge source
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import gnbr_beacon
+from gnbr_beacon.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.MetadataApi()
+api_instance = gnbr_beacon.MetadataApi()
 
 try:
     api_response = api_instance.get_predicates()

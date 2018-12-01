@@ -1,6 +1,6 @@
-# swagger_client.StatementsApi
+# gnbr_beacon.StatementsApi
 
-All URIs are relative to *http://gnbr.ncats.io:8080*
+All URIs are relative to *https://gnbr.ncats.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -19,12 +19,12 @@ Retrieves a details relating to a specified concept-relationship statement inclu
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import gnbr_beacon
+from gnbr_beacon.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.StatementsApi()
+api_instance = gnbr_beacon.StatementsApi()
 statement_id = 'statement_id_example' # str | (url-encoded) CURIE identifier of the concept-relationship statement (\"assertion\", \"claim\") for which associated evidence is sought 
 keywords = ['keywords_example'] # list[str] | an array of keywords or substrings against which to  filter annotation names (e.g. publication titles). (optional)
 offset = 56 # int | offset (cursor position) to next batch of annotation entries of amount 'size' to return.  (optional)
@@ -72,12 +72,12 @@ Given a constrained set of some [CURIE-encoded](https://www.w3.org/TR/curie/)  '
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import gnbr_beacon
+from gnbr_beacon.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.StatementsApi()
+api_instance = gnbr_beacon.StatementsApi()
 s = ['s_example'] # list[str] | An (optional) array set of [CURIE-encoded](https://www.w3.org/TR/curie/) identifiers of  'source' ('start') concepts possibly known to the beacon. Unknown CURIES should simply be ignored (silent match failure).  (optional)
 s_keywords = ['s_keywords_example'] # list[str] | An (optional) array of keywords or substrings against which to filter  'source' concept names and synonyms (optional)
 s_categories = ['s_categories_example'] # list[str] | An (optional) array set of 'source' concept categories (specified as  Biolink name labels codes gene, pathway, etc.) to which to constrain concepts matched by the main keyword search (see [Biolink Model](https://biolink.github.io/biolink-model) for the full list of codes)  (optional)

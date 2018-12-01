@@ -15,16 +15,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.api.metadata_api import MetadataApi  # noqa: E501
-from swagger_client.rest import ApiException
+import gnbr_beacon
+from gnbr_beacon.api.metadata_api import MetadataApi  # noqa: E501
+from gnbr_beacon.rest import ApiException
 
 
 class TestMetadataApi(unittest.TestCase):
     """MetadataApi unit test stubs"""
 
     def setUp(self):
-        self.api = swagger_client.api.metadata_api.MetadataApi()  # noqa: E501
+        self.api = gnbr_beacon.api.metadata_api.MetadataApi()  # noqa: E501
 
     def tearDown(self):
         pass

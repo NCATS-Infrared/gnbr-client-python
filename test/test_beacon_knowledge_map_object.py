@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.beacon_knowledge_map_object import BeaconKnowledgeMapObject  # noqa: E501
-from swagger_client.rest import ApiException
+import gnbr_beacon
+from gnbr_beacon.models.beacon_knowledge_map_object import BeaconKnowledgeMapObject  # noqa: E501
+from gnbr_beacon.rest import ApiException
 
 
 class TestBeaconKnowledgeMapObject(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestBeaconKnowledgeMapObject(unittest.TestCase):
     def testBeaconKnowledgeMapObject(self):
         """Test BeaconKnowledgeMapObject"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.beacon_knowledge_map_object.BeaconKnowledgeMapObject()  # noqa: E501
+        # model = gnbr_beacon.models.beacon_knowledge_map_object.BeaconKnowledgeMapObject()  # noqa: E501
         pass
 
 

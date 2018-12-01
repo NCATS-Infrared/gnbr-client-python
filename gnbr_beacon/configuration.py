@@ -47,7 +47,7 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
     def __init__(self):
         """Constructor"""
         # Default Base url
-        self.host = "http://gnbr.ncats.io:8080"
+        self.host = "https://gnbr.ncats.io"
         # Temp file folder for downloading files
         self.temp_folder_path = None
 
@@ -63,7 +63,7 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
 
         # Logging Settings
         self.logger = {}
-        self.logger["package_logger"] = logging.getLogger("swagger_client")
+        self.logger["package_logger"] = logging.getLogger("gnbr_beacon")
         self.logger["urllib3_logger"] = logging.getLogger("urllib3")
         # Log format
         self.logger_format = '%(asctime)s %(levelname)s %(message)s'
@@ -79,7 +79,7 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
         # SSL/TLS verification
         # Set this to false to skip verifying SSL certificate when calling API
         # from https server.
-        self.verify_ssl = False
+        self.verify_ssl = True
         # Set this to customize the certificate file to verify the peer.
         self.ssl_ca_cert = None
         # client certificate file

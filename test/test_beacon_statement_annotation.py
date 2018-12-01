@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.beacon_statement_annotation import BeaconStatementAnnotation  # noqa: E501
-from swagger_client.rest import ApiException
+import gnbr_beacon
+from gnbr_beacon.models.beacon_statement_annotation import BeaconStatementAnnotation  # noqa: E501
+from gnbr_beacon.rest import ApiException
 
 
 class TestBeaconStatementAnnotation(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestBeaconStatementAnnotation(unittest.TestCase):
     def testBeaconStatementAnnotation(self):
         """Test BeaconStatementAnnotation"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.beacon_statement_annotation.BeaconStatementAnnotation()  # noqa: E501
+        # model = gnbr_beacon.models.beacon_statement_annotation.BeaconStatementAnnotation()  # noqa: E501
         pass
 
 

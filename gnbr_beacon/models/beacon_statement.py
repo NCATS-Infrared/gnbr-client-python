@@ -16,9 +16,9 @@ import re  # noqa: F401
 
 import six
 
-from swagger_client.models.beacon_statement_object import BeaconStatementObject  # noqa: F401,E501
-from swagger_client.models.beacon_statement_predicate import BeaconStatementPredicate  # noqa: F401,E501
-from swagger_client.models.beacon_statement_subject import BeaconStatementSubject  # noqa: F401,E501
+from gnbr_beacon.models.beacon_statement_object import BeaconStatementObject  # noqa: F401,E501
+from gnbr_beacon.models.beacon_statement_predicate import BeaconStatementPredicate  # noqa: F401,E501
+from gnbr_beacon.models.beacon_statement_subject import BeaconStatementSubject  # noqa: F401,E501
 
 
 class BeaconStatement(object):
@@ -36,35 +36,35 @@ class BeaconStatement(object):
     """
     swagger_types = {
         'id': 'str',
-        'subject': 'BeaconStatementSubject',
+        'object': 'BeaconStatementObject',
         'predicate': 'BeaconStatementPredicate',
-        'object': 'BeaconStatementObject'
+        'subject': 'BeaconStatementSubject'
     }
 
     attribute_map = {
         'id': 'id',
-        'subject': 'subject',
+        'object': 'object',
         'predicate': 'predicate',
-        'object': 'object'
+        'subject': 'subject'
     }
 
-    def __init__(self, id=None, subject=None, predicate=None, object=None):  # noqa: E501
+    def __init__(self, id=None, object=None, predicate=None, subject=None):  # noqa: E501
         """BeaconStatement - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
-        self._subject = None
-        self._predicate = None
         self._object = None
+        self._predicate = None
+        self._subject = None
         self.discriminator = None
 
         if id is not None:
             self.id = id
-        if subject is not None:
-            self.subject = subject
-        if predicate is not None:
-            self.predicate = predicate
         if object is not None:
             self.object = object
+        if predicate is not None:
+            self.predicate = predicate
+        if subject is not None:
+            self.subject = subject
 
     @property
     def id(self):
@@ -90,25 +90,25 @@ class BeaconStatement(object):
         self._id = id
 
     @property
-    def subject(self):
-        """Gets the subject of this BeaconStatement.  # noqa: E501
+    def object(self):
+        """Gets the object of this BeaconStatement.  # noqa: E501
 
 
-        :return: The subject of this BeaconStatement.  # noqa: E501
-        :rtype: BeaconStatementSubject
+        :return: The object of this BeaconStatement.  # noqa: E501
+        :rtype: BeaconStatementObject
         """
-        return self._subject
+        return self._object
 
-    @subject.setter
-    def subject(self, subject):
-        """Sets the subject of this BeaconStatement.
+    @object.setter
+    def object(self, object):
+        """Sets the object of this BeaconStatement.
 
 
-        :param subject: The subject of this BeaconStatement.  # noqa: E501
-        :type: BeaconStatementSubject
+        :param object: The object of this BeaconStatement.  # noqa: E501
+        :type: BeaconStatementObject
         """
 
-        self._subject = subject
+        self._object = object
 
     @property
     def predicate(self):
@@ -132,25 +132,25 @@ class BeaconStatement(object):
         self._predicate = predicate
 
     @property
-    def object(self):
-        """Gets the object of this BeaconStatement.  # noqa: E501
+    def subject(self):
+        """Gets the subject of this BeaconStatement.  # noqa: E501
 
 
-        :return: The object of this BeaconStatement.  # noqa: E501
-        :rtype: BeaconStatementObject
+        :return: The subject of this BeaconStatement.  # noqa: E501
+        :rtype: BeaconStatementSubject
         """
-        return self._object
+        return self._subject
 
-    @object.setter
-    def object(self, object):
-        """Sets the object of this BeaconStatement.
+    @subject.setter
+    def subject(self, subject):
+        """Sets the subject of this BeaconStatement.
 
 
-        :param object: The object of this BeaconStatement.  # noqa: E501
-        :type: BeaconStatementObject
+        :param subject: The subject of this BeaconStatement.  # noqa: E501
+        :type: BeaconStatementSubject
         """
 
-        self._object = object
+        self._subject = subject
 
     def to_dict(self):
         """Returns the model properties as a dict"""

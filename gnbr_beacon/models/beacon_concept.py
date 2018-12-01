@@ -31,82 +31,36 @@ class BeaconConcept(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'str',
-        'name': 'str',
         'categories': 'list[str]',
-        'description': 'str'
+        'description': 'str',
+        'id': 'str',
+        'name': 'str'
     }
 
     attribute_map = {
-        'id': 'id',
-        'name': 'name',
         'categories': 'categories',
-        'description': 'description'
+        'description': 'description',
+        'id': 'id',
+        'name': 'name'
     }
 
-    def __init__(self, id=None, name=None, categories=None, description=None):  # noqa: E501
+    def __init__(self, categories=None, description=None, id=None, name=None):  # noqa: E501
         """BeaconConcept - a model defined in Swagger"""  # noqa: E501
 
-        self._id = None
-        self._name = None
         self._categories = None
         self._description = None
+        self._id = None
+        self._name = None
         self.discriminator = None
 
-        if id is not None:
-            self.id = id
-        if name is not None:
-            self.name = name
         if categories is not None:
             self.categories = categories
         if description is not None:
             self.description = description
-
-    @property
-    def id(self):
-        """Gets the id of this BeaconConcept.  # noqa: E501
-
-        local object CURIE for the concept in the specified knowledge source database   # noqa: E501
-
-        :return: The id of this BeaconConcept.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this BeaconConcept.
-
-        local object CURIE for the concept in the specified knowledge source database   # noqa: E501
-
-        :param id: The id of this BeaconConcept.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
-
-    @property
-    def name(self):
-        """Gets the name of this BeaconConcept.  # noqa: E501
-
-        canonical human readable name of the concept   # noqa: E501
-
-        :return: The name of this BeaconConcept.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this BeaconConcept.
-
-        canonical human readable name of the concept   # noqa: E501
-
-        :param name: The name of this BeaconConcept.  # noqa: E501
-        :type: str
-        """
-
-        self._name = name
+        if id is not None:
+            self.id = id
+        if name is not None:
+            self.name = name
 
     @property
     def categories(self):
@@ -153,6 +107,52 @@ class BeaconConcept(object):
         """
 
         self._description = description
+
+    @property
+    def id(self):
+        """Gets the id of this BeaconConcept.  # noqa: E501
+
+        local object CURIE for the concept in the specified knowledge source database   # noqa: E501
+
+        :return: The id of this BeaconConcept.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this BeaconConcept.
+
+        local object CURIE for the concept in the specified knowledge source database   # noqa: E501
+
+        :param id: The id of this BeaconConcept.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
+
+    @property
+    def name(self):
+        """Gets the name of this BeaconConcept.  # noqa: E501
+
+        canonical human readable name of the concept   # noqa: E501
+
+        :return: The name of this BeaconConcept.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this BeaconConcept.
+
+        canonical human readable name of the concept   # noqa: E501
+
+        :param name: The name of this BeaconConcept.  # noqa: E501
+        :type: str
+        """
+
+        self._name = name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

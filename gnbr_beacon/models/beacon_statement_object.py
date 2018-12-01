@@ -31,31 +31,54 @@ class BeaconStatementObject(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'categories': 'list[str]',
         'id': 'str',
-        'name': 'str',
-        'categories': 'list[str]'
+        'name': 'str'
     }
 
     attribute_map = {
+        'categories': 'categories',
         'id': 'id',
-        'name': 'name',
-        'categories': 'categories'
+        'name': 'name'
     }
 
-    def __init__(self, id=None, name=None, categories=None):  # noqa: E501
+    def __init__(self, categories=None, id=None, name=None):  # noqa: E501
         """BeaconStatementObject - a model defined in Swagger"""  # noqa: E501
 
+        self._categories = None
         self._id = None
         self._name = None
-        self._categories = None
         self.discriminator = None
 
+        if categories is not None:
+            self.categories = categories
         if id is not None:
             self.id = id
         if name is not None:
             self.name = name
-        if categories is not None:
-            self.categories = categories
+
+    @property
+    def categories(self):
+        """Gets the categories of this BeaconStatementObject.  # noqa: E501
+
+        a semantic group for the object concept (specified as a code gene, pathway, disease, etc. - see [Biolink Model](https://biolink.github.io/biolink-model) for the full list of categories)   # noqa: E501
+
+        :return: The categories of this BeaconStatementObject.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._categories
+
+    @categories.setter
+    def categories(self, categories):
+        """Sets the categories of this BeaconStatementObject.
+
+        a semantic group for the object concept (specified as a code gene, pathway, disease, etc. - see [Biolink Model](https://biolink.github.io/biolink-model) for the full list of categories)   # noqa: E501
+
+        :param categories: The categories of this BeaconStatementObject.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._categories = categories
 
     @property
     def id(self):
@@ -102,29 +125,6 @@ class BeaconStatementObject(object):
         """
 
         self._name = name
-
-    @property
-    def categories(self):
-        """Gets the categories of this BeaconStatementObject.  # noqa: E501
-
-        a semantic group for the object concept (specified as a code gene, pathway, disease, etc. - see [Biolink Model](https://biolink.github.io/biolink-model) for the full list of categories)   # noqa: E501
-
-        :return: The categories of this BeaconStatementObject.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._categories
-
-    @categories.setter
-    def categories(self, categories):
-        """Sets the categories of this BeaconStatementObject.
-
-        a semantic group for the object concept (specified as a code gene, pathway, disease, etc. - see [Biolink Model](https://biolink.github.io/biolink-model) for the full list of categories)   # noqa: E501
-
-        :param categories: The categories of this BeaconStatementObject.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._categories = categories
 
     def to_dict(self):
         """Returns the model properties as a dict"""

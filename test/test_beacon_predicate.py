@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.beacon_predicate import BeaconPredicate  # noqa: E501
-from swagger_client.rest import ApiException
+import gnbr_beacon
+from gnbr_beacon.models.beacon_predicate import BeaconPredicate  # noqa: E501
+from gnbr_beacon.rest import ApiException
 
 
 class TestBeaconPredicate(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestBeaconPredicate(unittest.TestCase):
     def testBeaconPredicate(self):
         """Test BeaconPredicate"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.beacon_predicate.BeaconPredicate()  # noqa: E501
+        # model = gnbr_beacon.models.beacon_predicate.BeaconPredicate()  # noqa: E501
         pass
 
 

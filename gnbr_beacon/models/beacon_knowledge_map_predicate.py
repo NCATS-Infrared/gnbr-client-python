@@ -32,30 +32,30 @@ class BeaconKnowledgeMapPredicate(object):
     """
     swagger_types = {
         'edge_label': 'str',
-        'relation': 'str',
-        'negated': 'bool'
+        'negated': 'bool',
+        'relation': 'str'
     }
 
     attribute_map = {
         'edge_label': 'edge_label',
-        'relation': 'relation',
-        'negated': 'negated'
+        'negated': 'negated',
+        'relation': 'relation'
     }
 
-    def __init__(self, edge_label=None, relation=None, negated=None):  # noqa: E501
+    def __init__(self, edge_label=None, negated=None, relation=None):  # noqa: E501
         """BeaconKnowledgeMapPredicate - a model defined in Swagger"""  # noqa: E501
 
         self._edge_label = None
-        self._relation = None
         self._negated = None
+        self._relation = None
         self.discriminator = None
 
         if edge_label is not None:
             self.edge_label = edge_label
-        if relation is not None:
-            self.relation = relation
         if negated is not None:
             self.negated = negated
+        if relation is not None:
+            self.relation = relation
 
     @property
     def edge_label(self):
@@ -81,29 +81,6 @@ class BeaconKnowledgeMapPredicate(object):
         self._edge_label = edge_label
 
     @property
-    def relation(self):
-        """Gets the relation of this BeaconKnowledgeMapPredicate.  # noqa: E501
-
-        Human readable name of a 'maximal' Biolink Model or  beacon-specific (or Reasoner-specific) predicate relationship name.   # noqa: E501
-
-        :return: The relation of this BeaconKnowledgeMapPredicate.  # noqa: E501
-        :rtype: str
-        """
-        return self._relation
-
-    @relation.setter
-    def relation(self, relation):
-        """Sets the relation of this BeaconKnowledgeMapPredicate.
-
-        Human readable name of a 'maximal' Biolink Model or  beacon-specific (or Reasoner-specific) predicate relationship name.   # noqa: E501
-
-        :param relation: The relation of this BeaconKnowledgeMapPredicate.  # noqa: E501
-        :type: str
-        """
-
-        self._relation = relation
-
-    @property
     def negated(self):
         """Gets the negated of this BeaconKnowledgeMapPredicate.  # noqa: E501
 
@@ -125,6 +102,29 @@ class BeaconKnowledgeMapPredicate(object):
         """
 
         self._negated = negated
+
+    @property
+    def relation(self):
+        """Gets the relation of this BeaconKnowledgeMapPredicate.  # noqa: E501
+
+        Human readable name of a 'maximal' Biolink Model or  beacon-specific (or Reasoner-specific) predicate relationship name.   # noqa: E501
+
+        :return: The relation of this BeaconKnowledgeMapPredicate.  # noqa: E501
+        :rtype: str
+        """
+        return self._relation
+
+    @relation.setter
+    def relation(self, relation):
+        """Sets the relation of this BeaconKnowledgeMapPredicate.
+
+        Human readable name of a 'maximal' Biolink Model or  beacon-specific (or Reasoner-specific) predicate relationship name.   # noqa: E501
+
+        :param relation: The relation of this BeaconKnowledgeMapPredicate.  # noqa: E501
+        :type: str
+        """
+
+        self._relation = relation
 
     def to_dict(self):
         """Returns the model properties as a dict"""

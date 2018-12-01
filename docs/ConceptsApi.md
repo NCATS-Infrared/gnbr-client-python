@@ -1,6 +1,6 @@
-# swagger_client.ConceptsApi
+# gnbr_beacon.ConceptsApi
 
-All URIs are relative to *http://gnbr.ncats.io:8080*
+All URIs are relative to *https://gnbr.ncats.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -20,12 +20,12 @@ Retrieves details for a specified concepts in the system, as specified by a (url
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import gnbr_beacon
+from gnbr_beacon.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ConceptsApi()
+api_instance = gnbr_beacon.ConceptsApi()
 concept_id = 'concept_id_example' # str | (url-encoded) CURIE identifier of concept of interest
 
 try:
@@ -67,12 +67,12 @@ Retrieves a list of whose concept in the  beacon knowledge base with names and/o
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import gnbr_beacon
+from gnbr_beacon.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ConceptsApi()
+api_instance = gnbr_beacon.ConceptsApi()
 keywords = ['keywords_example'] # list[str] | (Optional) array of keywords or substrings against which to match concept names and synonyms (optional)
 categories = ['categories_example'] # list[str] | (Optional) array set of concept categories - specified as Biolink name labels codes gene, pathway, etc. - to which to constrain concepts matched by the main keyword search (see [Biolink Model](https://biolink.github.io/biolink-model) for the full list of terms)  (optional)
 offset = 56 # int | offset (cursor position) to next batch of statements of amount 'size' to return.  (optional)
@@ -120,12 +120,12 @@ Given an input array of [CURIE](https://www.w3.org/TR/curie/) identifiers of kno
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import gnbr_beacon
+from gnbr_beacon.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ConceptsApi()
+api_instance = gnbr_beacon.ConceptsApi()
 c = ['c_example'] # list[str] | an array set of [CURIE-encoded](https://www.w3.org/TR/curie/)  identifiers of concepts thought to be exactly matching concepts, to be used in a search for additional exactly matching concepts [*sensa*-SKOS](http://www.w3.org/2004/02/skos/core#exactMatch). 
 
 try:

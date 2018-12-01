@@ -16,8 +16,8 @@ import re  # noqa: F401
 
 import six
 
-from swagger_client.models.beacon_statement_annotation import BeaconStatementAnnotation  # noqa: F401,E501
-from swagger_client.models.beacon_statement_citation import BeaconStatementCitation  # noqa: F401,E501
+from gnbr_beacon.models.beacon_statement_annotation import BeaconStatementAnnotation  # noqa: F401,E501
+from gnbr_beacon.models.beacon_statement_citation import BeaconStatementCitation  # noqa: F401,E501
 
 
 class BeaconStatementWithDetails(object):
@@ -34,34 +34,38 @@ class BeaconStatementWithDetails(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'annotation': 'list[BeaconStatementAnnotation]',
+        'evidence': 'list[BeaconStatementCitation]',
         'id': 'str',
         'is_defined_by': 'str',
         'provided_by': 'str',
-        'qualifiers': 'list[str]',
-        'annotation': 'list[BeaconStatementAnnotation]',
-        'evidence': 'list[BeaconStatementCitation]'
+        'qualifiers': 'list[str]'
     }
 
     attribute_map = {
+        'annotation': 'annotation',
+        'evidence': 'evidence',
         'id': 'id',
         'is_defined_by': 'is_defined_by',
         'provided_by': 'provided_by',
-        'qualifiers': 'qualifiers',
-        'annotation': 'annotation',
-        'evidence': 'evidence'
+        'qualifiers': 'qualifiers'
     }
 
-    def __init__(self, id=None, is_defined_by=None, provided_by=None, qualifiers=None, annotation=None, evidence=None):  # noqa: E501
+    def __init__(self, annotation=None, evidence=None, id=None, is_defined_by=None, provided_by=None, qualifiers=None):  # noqa: E501
         """BeaconStatementWithDetails - a model defined in Swagger"""  # noqa: E501
 
+        self._annotation = None
+        self._evidence = None
         self._id = None
         self._is_defined_by = None
         self._provided_by = None
         self._qualifiers = None
-        self._annotation = None
-        self._evidence = None
         self.discriminator = None
 
+        if annotation is not None:
+            self.annotation = annotation
+        if evidence is not None:
+            self.evidence = evidence
         if id is not None:
             self.id = id
         if is_defined_by is not None:
@@ -70,10 +74,52 @@ class BeaconStatementWithDetails(object):
             self.provided_by = provided_by
         if qualifiers is not None:
             self.qualifiers = qualifiers
-        if annotation is not None:
-            self.annotation = annotation
-        if evidence is not None:
-            self.evidence = evidence
+
+    @property
+    def annotation(self):
+        """Gets the annotation of this BeaconStatementWithDetails.  # noqa: E501
+
+        Extra edge properties, generally compliant with Translator Knowledge Graph Standard Specification   # noqa: E501
+
+        :return: The annotation of this BeaconStatementWithDetails.  # noqa: E501
+        :rtype: list[BeaconStatementAnnotation]
+        """
+        return self._annotation
+
+    @annotation.setter
+    def annotation(self, annotation):
+        """Sets the annotation of this BeaconStatementWithDetails.
+
+        Extra edge properties, generally compliant with Translator Knowledge Graph Standard Specification   # noqa: E501
+
+        :param annotation: The annotation of this BeaconStatementWithDetails.  # noqa: E501
+        :type: list[BeaconStatementAnnotation]
+        """
+
+        self._annotation = annotation
+
+    @property
+    def evidence(self):
+        """Gets the evidence of this BeaconStatementWithDetails.  # noqa: E501
+
+        Array of research citations serving as supporting evidence  for this knowledge statement.   # noqa: E501
+
+        :return: The evidence of this BeaconStatementWithDetails.  # noqa: E501
+        :rtype: list[BeaconStatementCitation]
+        """
+        return self._evidence
+
+    @evidence.setter
+    def evidence(self, evidence):
+        """Sets the evidence of this BeaconStatementWithDetails.
+
+        Array of research citations serving as supporting evidence  for this knowledge statement.   # noqa: E501
+
+        :param evidence: The evidence of this BeaconStatementWithDetails.  # noqa: E501
+        :type: list[BeaconStatementCitation]
+        """
+
+        self._evidence = evidence
 
     @property
     def id(self):
@@ -166,52 +212,6 @@ class BeaconStatementWithDetails(object):
         """
 
         self._qualifiers = qualifiers
-
-    @property
-    def annotation(self):
-        """Gets the annotation of this BeaconStatementWithDetails.  # noqa: E501
-
-        Extra edge properties, generally compliant with Translator Knowledge Graph Standard Specification   # noqa: E501
-
-        :return: The annotation of this BeaconStatementWithDetails.  # noqa: E501
-        :rtype: list[BeaconStatementAnnotation]
-        """
-        return self._annotation
-
-    @annotation.setter
-    def annotation(self, annotation):
-        """Sets the annotation of this BeaconStatementWithDetails.
-
-        Extra edge properties, generally compliant with Translator Knowledge Graph Standard Specification   # noqa: E501
-
-        :param annotation: The annotation of this BeaconStatementWithDetails.  # noqa: E501
-        :type: list[BeaconStatementAnnotation]
-        """
-
-        self._annotation = annotation
-
-    @property
-    def evidence(self):
-        """Gets the evidence of this BeaconStatementWithDetails.  # noqa: E501
-
-        Array of research citations serving as supporting evidence  for this knowledge statement.   # noqa: E501
-
-        :return: The evidence of this BeaconStatementWithDetails.  # noqa: E501
-        :rtype: list[BeaconStatementCitation]
-        """
-        return self._evidence
-
-    @evidence.setter
-    def evidence(self, evidence):
-        """Sets the evidence of this BeaconStatementWithDetails.
-
-        Array of research citations serving as supporting evidence  for this knowledge statement.   # noqa: E501
-
-        :param evidence: The evidence of this BeaconStatementWithDetails.  # noqa: E501
-        :type: list[BeaconStatementCitation]
-        """
-
-        self._evidence = evidence
 
     def to_dict(self):
         """Returns the model properties as a dict"""

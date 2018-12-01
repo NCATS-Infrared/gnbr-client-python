@@ -15,16 +15,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.api.statements_api import StatementsApi  # noqa: E501
-from swagger_client.rest import ApiException
+import gnbr_beacon
+from gnbr_beacon.api.statements_api import StatementsApi  # noqa: E501
+from gnbr_beacon.rest import ApiException
 
 
 class TestStatementsApi(unittest.TestCase):
     """StatementsApi unit test stubs"""
 
     def setUp(self):
-        self.api = swagger_client.api.statements_api.StatementsApi()  # noqa: E501
+        self.api = gnbr_beacon.api.statements_api.StatementsApi()  # noqa: E501
 
     def tearDown(self):
         pass

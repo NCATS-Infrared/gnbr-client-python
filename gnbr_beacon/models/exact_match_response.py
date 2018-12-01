@@ -31,31 +31,54 @@ class ExactMatchResponse(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'has_exact_matches': 'list[str]',
         'id': 'str',
-        'within_domain': 'bool',
-        'has_exact_matches': 'list[str]'
+        'within_domain': 'bool'
     }
 
     attribute_map = {
+        'has_exact_matches': 'has_exact_matches',
         'id': 'id',
-        'within_domain': 'within_domain',
-        'has_exact_matches': 'has_exact_matches'
+        'within_domain': 'within_domain'
     }
 
-    def __init__(self, id=None, within_domain=None, has_exact_matches=None):  # noqa: E501
+    def __init__(self, has_exact_matches=None, id=None, within_domain=None):  # noqa: E501
         """ExactMatchResponse - a model defined in Swagger"""  # noqa: E501
 
+        self._has_exact_matches = None
         self._id = None
         self._within_domain = None
-        self._has_exact_matches = None
         self.discriminator = None
 
+        if has_exact_matches is not None:
+            self.has_exact_matches = has_exact_matches
         if id is not None:
             self.id = id
         if within_domain is not None:
             self.within_domain = within_domain
-        if has_exact_matches is not None:
-            self.has_exact_matches = has_exact_matches
+
+    @property
+    def has_exact_matches(self):
+        """Gets the has_exact_matches of this ExactMatchResponse.  # noqa: E501
+
+        List of [CURIE](https://www.w3.org/TR/curie/) identifiers of a exactly matching concepts.   # noqa: E501
+
+        :return: The has_exact_matches of this ExactMatchResponse.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_exact_matches
+
+    @has_exact_matches.setter
+    def has_exact_matches(self, has_exact_matches):
+        """Sets the has_exact_matches of this ExactMatchResponse.
+
+        List of [CURIE](https://www.w3.org/TR/curie/) identifiers of a exactly matching concepts.   # noqa: E501
+
+        :param has_exact_matches: The has_exact_matches of this ExactMatchResponse.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_exact_matches = has_exact_matches
 
     @property
     def id(self):
@@ -102,29 +125,6 @@ class ExactMatchResponse(object):
         """
 
         self._within_domain = within_domain
-
-    @property
-    def has_exact_matches(self):
-        """Gets the has_exact_matches of this ExactMatchResponse.  # noqa: E501
-
-        List of [CURIE](https://www.w3.org/TR/curie/) identifiers of a exactly matching concepts.   # noqa: E501
-
-        :return: The has_exact_matches of this ExactMatchResponse.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._has_exact_matches
-
-    @has_exact_matches.setter
-    def has_exact_matches(self, has_exact_matches):
-        """Sets the has_exact_matches of this ExactMatchResponse.
-
-        List of [CURIE](https://www.w3.org/TR/curie/) identifiers of a exactly matching concepts.   # noqa: E501
-
-        :param has_exact_matches: The has_exact_matches of this ExactMatchResponse.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._has_exact_matches = has_exact_matches
 
     def to_dict(self):
         """Returns the model properties as a dict"""
